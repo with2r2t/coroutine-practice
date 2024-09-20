@@ -9,11 +9,11 @@ fun main() = runBlocking { // this: CoroutineScope
 
 suspend fun doWorld() = coroutineScope {
     launch {
-        delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
+        delay(3000L) // non-blocking delay for 1 second (default time unit is ms)
         println("World!") // print after delay
     }
     launch{
-        delay(3000L) // non-blocking delay for 1 second (default time unit is ms)
+        delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
         println("World?") // print after delay
     }
     println("Hello")
